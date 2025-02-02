@@ -1,0 +1,21 @@
+{% extends "superheroes/superheroes_base.html" %}
+{% block content %}
+<div class="container">
+<h1>{{ message }}</h1>
+<h3><a href="{% url 'superheroes:herolist' %}">Hero List</a></h3>
+<h3>Add hero</h3>
+<ul>
+    <li><a href="{% url 'superheroes:heroadd' 'plain' %}">No layout</a></li>
+    <li><a href="{% url 'superheroes:heroadd' 'as_div' %}">Div layout</a></li>
+    <li><a href="{% url 'superheroes:heroadd' 'as_paragraph' %}">Paragraph layout</a></li>
+    <li><a href="{% url 'superheroes:heroadd' 'as_unordered_list' %}">Unordered list layout</a></li>
+    <li><a href="{% url 'superheroes:heroadd' 'as_table' %}">Table layout</a></li>
+    <li><a href="{% url 'superheroes:heroadd' 'crispy' %}">Crispy layout</a></li>
+</ul>
+<h3><a href="{% url 'superheroes:herodelete' %}">Delete hero with entry blank</a></h3>
+<h3><a href="{% url 'superheroes:herodeletedropdown' %}">Delete hero from dropdown list</a></h3>
+<h3><a href="{% url 'superheroes:demo' %}">Form field demo</a></h3>
+
+</div>
+{% endblock content %}
+

@@ -1,0 +1,51 @@
+{% extends "superheroes/superheroes_base.html" %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+
+<dl>
+    <dt>Superhero.objects.all()</dt>
+    <dd>{{ all }}</dd>
+    <dt>Superhero.objects.filter(name="Superman")</dt>
+    <dd>{{ superman }}</dd>
+    <dt>Superhero.objects.filter(name="Superman").first()</dt>
+    <dd>{{ superman_first }}</dd>
+    <dt>Superhero.objects.filter(name="Spider-Man").first().secret_identity</dt>
+    <dd>{{ spiderman_first_id }}</dd>
+    <dt>Superhero.objects.filter(name="Superman").first().enemies.all</dt>
+    <dd>{{ superman_enemies_all }}</dd>
+    <dt>Superhero.objects.get(name="Spider-Man").powers.all</dt>
+    <dd>{{ spiderman_get_powers_all }}</dd>
+    <dt>Superhero.objects.exclude(name="Wonder Woman")</dt>
+    <dd>{{ exclude_ww }}</dd>
+    <dt>Superhero.objects.order_by("name")</dt>
+    <dd>{{ all_order_by }}</dd>
+    <dt>Superhero.objects.count()</dt>
+    <dd>{{ all_count }}</dd>
+    <dt>Superhero.objects.aggregate(Count("name"))</dt>
+    <dd>{{ agg_count }}</dd>
+    <dt>Superhero.objects.aggregate(Min("name"))</dt>
+    <dd>{{ agg_min }}</dd>
+    <dt>Superhero.objects.aggregate(Max("secret_identity"))</dt>
+    <dd>{{ agg_max }}</dd>
+    <dt>Superhero.objects.aggregate(Min("name"),Max("name"))</dt>
+    <dd>{{ agg_minmax }}</dd>
+    <dt>Superhero.objects.filter(name__icontains="man")</dt>
+    <dd>{{ contains }}</dd>
+    <dt>Superhero.objects.filter(name__icontains="man").count()</dt>
+    <dd>{{ contains_count }}</dd>
+    <dt>Superhero.objects.filter(name__icontains="man").exclude(name__icontains="woman")</dt>
+    <dd>{{ contains_exclude }}</dd>
+    <dt>Superhero.objects.filter(name__icontains="man").exclude(name__icontains="woman").count()</dt>
+    <dd>{{ contains_exclude_count }}</dd>
+    <dt>Superhero.objects.all()[:3]</dt>
+    <dd>{{ all_slice }}</dd>
+    <dt>Superhero.objects.filter(name__icontains="man")[:2]</dt>
+    <dd>{{ contains_slice }}</dd>
+    <dt>Superhero.objects.filter(enemies__name__icontains="Luthor").first().name</dt>
+    <dd>{{ enemies_icontains_name }}</dd>
+    <dt>Superhero.objects.filter(Q_DEADPOOL | Q_WOMAN)</dt>
+    <dd>{{ filter_q }}</dd>
+</dl>
+
+{% endblock %}

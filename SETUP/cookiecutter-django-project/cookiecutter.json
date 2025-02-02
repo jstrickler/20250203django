@@ -1,0 +1,8 @@
+{
+    "project_name": "",
+    "project_slug": "{{cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')}}",
+    "author_name": "",
+    "author_email": "",
+    "copyright_year": "2023",
+    "time_zone": "America/New_York"
+}
