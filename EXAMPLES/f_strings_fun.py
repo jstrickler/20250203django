@@ -1,5 +1,5 @@
 # fun with strings
-name = "Guido"
+name = "Guido" # Guido van Rossum
 
 print(f"name: {name}")
 # < left justify (default for non-numbers), 10 is field width, s formats a string
