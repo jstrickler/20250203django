@@ -3,15 +3,17 @@ import shutil
 import os
 
 app_config = "    '%s.apps.%sConfig'," % ("{{ cookiecutter.app_slug }}", "{{cookiecutter.app_slug.title()}}")
-current_folder = os.getcwd()
 
+current_folder = os.getcwd()
 project_name = os.path.basename(os.path.dirname(current_folder))
-settings_path = f'../{project_name}/config/settings/local.py'
-print(f"{project_name = }")
+settings_path = '../config/settings/dev.py'
+print(f"{os.getcwd() = }")
+
 
 temp_path = settings_path + ".tmp"
 backup_path = settings_path + ".bak"
 print(f"{current_folder = }")
+print(f"{settings_path = }")
 
 
 with open(settings_path) as settings_in:
