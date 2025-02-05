@@ -1,6 +1,7 @@
+x = 5
+y = "cheese"
+
 try:  # Execute code that might have a problem
-    x = 5
-    y = "cheese"
     z = x + y
     print("Bottom of try")
 

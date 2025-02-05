@@ -1,8 +1,12 @@
 def double(n):  # one required parameter
-    return n ** 2
+    return n * 2
 
 d = double(5)
 print(f"{d = }")
+
+x =  8
+print(f"{double(x) = }")
+
 
 def rectangle_area(length, width):
     return length * width

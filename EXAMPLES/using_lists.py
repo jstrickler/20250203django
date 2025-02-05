@@ -1,3 +1,6 @@
+stuff = []  # best practice
+things = list()  # also OK
+
 cities = ['Portland', 'Pittsburgh', 'Peoria']
 print(f"cities: {cities}\n")
 
@@ -10,7 +13,7 @@ cities.insert(5, "Buffalo")
 print(f"cities: {cities}\n")
 
 more_cities = ["Detroit", "Des Moines"]
-cities.extend(more_cities)
+cities.extend(more_cities)  # add each element to cities
 print(f"cities: {cities}\n")
 
 # LIST.append(obj) LIST.insert(idx, obj) LIST.extend(iterable)
@@ -30,3 +33,13 @@ print(f"city: {city}")
 print(f"cities: {cities}\n")
 
 # del LIST[idx]  LIST.remove(value) LIST.pop() LIST.pop(idx)    
+
+print(f"{cities[0] = }")
+print(f"{cities[4] = }")
+print(f"{cities[-1] = }")  # last element
+print(f"{cities[-2] = }")
+
+cities[0] = "Poughkeepsie"
+print(f"{cities = }")
+
+

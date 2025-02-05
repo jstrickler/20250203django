@@ -40,7 +40,10 @@ def square_area(side):
     """
     return side ** 2
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # python geometry.py NOT  import geometry
+
+    print("HI MOM!!!!")
+
     area1 = square_area(15)
     print(f"area1: {area1}")
     

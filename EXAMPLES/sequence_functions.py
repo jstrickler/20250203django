@@ -13,3 +13,6 @@ for m in sorted(colors):   # sorted() returns a sorted list
     print(m, end=' ')
 print()
 
+nums = [800, 80, 1000, 32, -3, 8, 18, 255, 400, 5, 5000]
+
+print(f"{sum(nums) = }")

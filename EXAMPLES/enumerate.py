@@ -1,5 +1,4 @@
 colors = "red blue green yellow brown black".split()
-
 months = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
 colors_enum = enumerate(colors)
