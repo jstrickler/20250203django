@@ -1,7 +1,9 @@
 {% extends "superheroes/superheroes_base.html" %}
 {% block content %}
 <div class="container">
-<h1>Welcome to the Django templates demo</h1>
+    <h1>Welcome to the Django templates demo</h1>
+    <div><a href="{% url 'superheroes:herourls' %}">Go to list of heroes</a></div>
+    <div><a href="{% url 'superheroes:herotags' 'Spider-Man' %}">See the hero tags page</a></div>
 </div>
 {% endblock content %}
 

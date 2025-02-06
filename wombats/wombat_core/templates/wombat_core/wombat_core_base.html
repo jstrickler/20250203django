@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}superheroes{% endblock title %}</title>
+    <title>{% block title %}Wombat Core{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -18,7 +18,8 @@
     <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
+    <!-- Your local or third-party CSS libraries go here -->
+    <link rel="stylesheet" href="{% static 'css/wombat_core.css' %}">
 
     {% endblock css %}
 
@@ -30,15 +31,9 @@
 
       {% block header %}{% endblock header %}
       {% block content %}
-        <p>Default content for superheroes</p>
+        <p>Default content for Wombat Core</p>
       {% endblock content %}
-      {% block footer %}
-      {% if not homepage %}
-      <div>
-        <a href="{% url 'superheroes:home' %}">return to home page</a>
-      </div>
-      {% endif %}
-      {% endblock footer %}
+      {% block footer %}{% endblock footer %}
 
     </div> <!-- /container -->
 
@@ -53,7 +48,7 @@
 
       <!-- App-specific Javascript in this file -->
 
-      <script src="{% static 'js/superheroes.js'"></script>
+      <script src="{% static 'js/wombat_core.js' %}"></script>
 
 
     {% endblock javascript %}

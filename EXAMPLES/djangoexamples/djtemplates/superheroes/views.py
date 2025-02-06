@@ -7,7 +7,8 @@ from django.template.loader import get_template
 
 
 def home(request):
-    return render(request, 'superheroes/home.html')
+    context = {'homepage': True}
+    return render(request, 'superheroes/home.html', context=context)
 
 
 def hero_hard_way(request, hero_name):

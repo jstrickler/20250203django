@@ -19,6 +19,8 @@ class City(models.Model):
 
     class Meta:
         db_table = "cities"
+        # verbose_name ="city"
+        verbose_name_plural = "cities"
 
     def __str__(self):
         return self.name
@@ -31,6 +33,7 @@ class Enemy(models.Model):
 
     class Meta:
         db_table = "enemies"
+        verbose_name_plural = "enemies"
 
     def __str__(self):
         return self.name

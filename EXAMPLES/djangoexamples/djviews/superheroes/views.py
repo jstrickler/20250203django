@@ -20,6 +20,6 @@ def hero(request, hero_name):
     """
     s = Superhero.objects.get(name=hero_name)
     return HttpResponse(
-        "{} is really {}".format(s.secret_identity, s.name)
+        f"{s.secret_identity} is really {s.name}"
     )
 

@@ -5,7 +5,11 @@
 <h2>Secret Identity: {{ hero.secret_identity }}</h2>
 <h2>Real Name: {{ hero.real_name }}</h2>
 <h2>First enemy: {{ hero.enemies.all.0 }}</h2>
-<h3>Enemies list: {{ hero.enemies.all }}</h3>
+<h3>Enemies list: {{ hero.enemies.all }}</h3> {#  this is a comment #}
+{% comment "what is this?" %}
+This is ignored
+{% endcomment %}
+
 </body>
 </html>
 </div>

@@ -1,11 +1,14 @@
 {% extends "superheroes/superheroes_base.html" %}
 
 {% block css %}
-    {{ block.super }}
+    {{ block.super }} {# use content from block in base template #}
     <style>.blue { color: blue; } .red { color: red; }</style>
 {% endblock %}
 
+{% block title %}Hero tags example{% endblock %}
+
 {% block content %}
+{{ block.super }}
 <div class="container">
     
 <h1>{{ hero.name }}</h1>

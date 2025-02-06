@@ -6,6 +6,10 @@
 
 <h3>Not safe: {{ html_fragment }}</h3>
 <h3>Safe: {{ html_fragment | safe }}</h3>
+<h3>{% autoescape off %}
+{{ html_fragment }}
+{% endautoescape %}
+</h3>
 
 </div>
 {% endblock content %}
