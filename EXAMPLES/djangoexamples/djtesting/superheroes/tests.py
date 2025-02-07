@@ -3,7 +3,6 @@ from django.urls import reverse
 
 from .models import Superhero
 
-
 class SuperheroTests(TestCase):
 
     fixtures = ['superheroes.json']
@@ -14,7 +13,7 @@ class SuperheroTests(TestCase):
 
     def test_response_returns_200(self):
         response = self.client.get(
-            reverse('superheroes:herodetails', args=('Superman',))
+            reverse ('superheroes:herodetails',args=('Superman',))
         )
         self.assertEqual(response.status_code, 200)
 
@@ -22,7 +21,7 @@ class SuperheroTests(TestCase):
         response = self.client.get(
             reverse('superheroes:herodetails', args=('Superman',))
         )
-        self.assertIn(b'Superman', response.content)
+        self.assertIn('Superman', response.content.decode())
 
     @tag('silly')
     def test_two_plus_two_is_four(self):

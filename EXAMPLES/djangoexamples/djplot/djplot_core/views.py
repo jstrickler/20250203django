@@ -2,7 +2,7 @@ import os
 from django.shortcuts import render
 from plotly.offline import plot
 import plotly.graph_objs as go
-from plotly.graph_objs import Scatter, Line
+from plotly.graph_objs import Scatter
 import pandas as pd
 from .forms import BabyNameForm
 

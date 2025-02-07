@@ -3,12 +3,12 @@ from django import forms
 from .models import Superhero
 from .validators import date_validator
 
-
 class DemoForm(forms.Form):
     DEMO_CHOICES = {'1': 'apple', '2': 'banana', '3': 'cherry'}
 
     demo_boolean = forms.BooleanField(label="Do you love Python?", required=False)
-    demo_char = forms.CharField(max_length=10, strip=True)
+    demo_char = forms.CharField(max_length=10,
+                                widget=forms.TextInput(attrs={'placeholder': "wombat"}))
     demo_choice = forms.ChoiceField(choices=DEMO_CHOICES.items())
     demo_date = forms.DateField(label="Date", validators=[date_validator])
     demo_email = forms.EmailField(label="Email address")
@@ -47,8 +47,8 @@ class HeroModelForm(forms.ModelForm):
     class Meta:
         model = Superhero
         fields = ['name', 'real_name', 'city', 'secret_identity', 'powers', 'enemies']
-        labels = {
-            'name': 'Hero Name',
-        }
+        # labels = {
+        #     'name': 'Hero Name',
+        # }
 
 

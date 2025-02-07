@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'crispy_bootstrap4', # required as of crispy forms 2.0
+    # pip install crispy-bootstrap4
     'superheroes.apps.SuperheroesConfig',
     # add your apps here:
     # 'myapp.apps.MyappConfig',
@@ -140,3 +142,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

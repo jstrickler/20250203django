@@ -9,7 +9,7 @@
 {% endif %}
 <form action="{% url 'superheroes:demo' %}" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.as_div }}
     <input type="submit" value="Submit"/>
 </form>
 
