@@ -1,0 +1,16 @@
+{% extends "djauth_core/djauth_core_base.html" %}
+{% block content %}
+<div class="container">
+<h1>Welcome to Django Auth App</h1>
+    <h2>{{ message }}</h2>
+    {% if user.is_authenticated %}
+    <h4><a href="{% url 'logout' %}">log out</a></h4>
+    {% else %}
+    <h4><a href="{% url 'login' %}">log in</a></h4>
+    {% endif %}
+    <h2><a href = "{% url 'djauth_core:private1' %}">Private Page 1</a></h2>
+    <h2><a href = "{% url 'djauth_core:private2' %}">Private Page 2</a></h2>
+    <h2><a href = "{% url 'djauth_core:public1' %}">Public Page 1</a></h2>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,10 @@
+{% extends "djplot_core/djplot_core_base.html" %}
+{% block content %}
+<div class="container">
+<h2>A simple plot with Plotly</h2>
+{% autoescape off %}
+     {{ plot_div }}
+{% endautoescape %}
+</div>
+{% endblock content %}
+

@@ -1,0 +1,1 @@
+Add views, templates, and url config so superheroes can be popped into a site all by itself.

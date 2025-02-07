@@ -1,0 +1,9 @@
+{% extends "djplot_core/djplot_core_base.html" %}
+{% block content %}
+<div class="container">
+<h1> Django Plot Demo Core</h1>
+<div><a href="{% url 'djplot_core:simpleplot' %}">Simple plot</a></div>
+<div><a href="{% url 'djplot_core:babyplot' %}">Baby names</a></div>
+</div>
+{% endblock content %}
+
