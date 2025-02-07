@@ -16,7 +16,7 @@ def home(request):
 @login_required(login_url='/users/login/')
 def private1(request):
     context = {'message': 'Only logged-in users can see this',
-                        'heading': 'Private Page 2'}
+                        'heading': 'Private Page 1'}
     return render(request, "djauth_core/common.html", context=context)
 
 class private2(LoginRequiredMixin, TemplateView):
@@ -33,4 +33,8 @@ class private2(LoginRequiredMixin, TemplateView):
 # anyone can see this
 def public1(request):
     context = {'message': 'Anyone can see this', 'heading': 'Public Page 1'}
+    if request.user.is_authenticated:
+        context['private'] = "This is private info, dude!"
+        # show private stuff
+
     return render(request, "djauth_core/common.html", context=context)
